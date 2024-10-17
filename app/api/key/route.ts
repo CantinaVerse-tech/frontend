@@ -3,8 +3,6 @@ import { type NextRequest, NextResponse } from "next/server";
 const { v4: uuidv4 } = require("uuid");
 import { pinata } from "@/utils/config"
 
-export const dynamic = "force-dynamic";
-
 /* eslint-disable */
 export async function GET(req: NextRequest, res: NextResponse) {
   try {
