@@ -1,7 +1,7 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import type { AppProps } from 'next/app';
 import Providers from '../providers/providers';
-import '../app/globals.css';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
