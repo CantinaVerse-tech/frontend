@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up GitHub Secrets
+        run: |
+          echo ${{ secrets.PINATA_JWT }} > .env.local
+          echo ${{ secrets.NEXT_PUBLIC_GATEWAY_URL }} > .env.local
       - name: Detect package manager
         id: detect-package-manager
         run: |
