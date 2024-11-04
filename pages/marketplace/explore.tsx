@@ -105,9 +105,10 @@ export default function Explore() {
     const fetchMetadata = useCallback(async (tokenURI: string) => {
         try {
             const response = await fetch(tokenURI);
+            if (!response.ok) throw new Error("Failed to fetch metadata");
             const metadata = await response.json();
             console.log('Fetched metadata:', metadata); // Log fetched metadata
-            return metadata.image; // Ensure this is the correct field
+            return metadata.image;
         } catch (error) {
             console.error("Failed to fetch metadata:", error);
             return TEMPORARY_IMAGE_URL; // Fallback image
@@ -148,8 +149,8 @@ export default function Explore() {
                             args: [0], // Use a valid token ID
                         });
 
-                        if (tokenURI) {
-                            const imageUrl = await fetchMetadata(tokenURI as unknown as string);
+                        if (tokenURI.data) {
+                            const imageUrl = await fetchMetadata(tokenURI.data as string);
                             updateCollectionImage(collection.collectionAddress, imageUrl);
                         }
                     } catch (error) {
