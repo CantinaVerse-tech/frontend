@@ -75,13 +75,9 @@
 }
 
 
-
-
-
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
-
 *,
 *::before,
 *::after {
@@ -146,9 +142,6 @@ body {
 ::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
 
 ::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -366,7 +359,7 @@ body {
 
 .main-heading {
   color: white;
-  font-size: 4.5em; 
+  font-size: calc(2vw + 1.5em);
   margin-bottom: 25px;
 }
 
@@ -528,6 +521,7 @@ body {
   color: var(--text-color);
   width: 100%; 
   margin: 0 auto; 
+  padding-inline: max(5vw, 20px);
 }
 
 .ecosystem-sections {
@@ -539,6 +533,7 @@ body {
   color: var(--text-color);
   width: 100%;
   margin: 0 auto;
+  padding-inline: max(5vw, 20px);
 }
 
 .left-column,
@@ -668,6 +663,7 @@ body {
 .menu-open-btn {
   margin-inline-start: auto;
   font-size: 2.6rem;
+  color: #ffffff;
 }
 
 .header ion-icon { color: var(--white); }
@@ -675,20 +671,21 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  right: -500px;
+  right: 0;
   width: 100%;
   max-width: 500px;
   height: 100%;
   background-color: var(--rich-black-fogra-39);
   visibility: hidden;
-  z-index: 2;
-  transition: 0.15s var(--cubic-in);
+  z-index: 4;
+  transform: translateX(100%);
+  transition: transform 0.35s var(--cubic-out), visibility 0s linear 0.35s;
 }
 
 .navbar.active {
   visibility: visible;
-  transform: translateX(-500px);
-  transition: 0.35s var(--cubic-out);
+  transform: translateX(0);
+  transition: transform 0.35s var(--cubic-out), visibility 0s;
 }
 
 .navbar-top,
@@ -732,8 +729,6 @@ body {
   opacity: 1;
   pointer-events: all;
 }
-
-
 
 
 
@@ -796,8 +791,6 @@ body {
   right: 0;
   z-index: -1;
 }
-
-
 
 
 
@@ -991,8 +984,6 @@ body {
 
 
 
-
-
 /*-----------------------------------*\
   #COLLECTION
 \*-----------------------------------*/
@@ -1042,8 +1033,6 @@ body {
   font-weight: var(--fw-600);
   margin-block: 15px;
 }
-
-
 
 
 
@@ -1165,8 +1154,6 @@ body {
   display: inline-block;
   transition: var(--transition-1);
 }
-
-
 
 
 /*-----------------------------------*\
@@ -1467,6 +1454,14 @@ body {
   }
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 /*-----------------------------------*\
   #Explore Page
@@ -1659,6 +1654,158 @@ margin-block: 10px;
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+/* For mobile devices */
+@media (max-width: 768px) {
+  .homepage-navbar {
+    padding: 0 20px;
+    height: 80px;
+  }
+
+  .navbar-links {
+    font-size: 1.6rem;
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  .homepage-top-container {
+    padding: 60px 20px;
+  }
+
+  .main-heading {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .mission-statement, .mission-description {
+    font-size: calc(1vw + 1em);
+    padding: 0 10px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .image-1, .image-2, .image-3 {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .right-aligned-container, .left-aligned-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+
+  .what-we-do-sections, .ecosystem-sections {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .footer-top,
+  .newsletter-section,
+  .team-section {
+    padding: 20px 5%;
+  }
+
+  .newsletter-title {
+    font-size: 1.5rem;
+  }
+
+  .aboutus-big-text {
+    font-size: 2.5rem;
+  }
+
+  .team-text-column, 
+  .team-image-column {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-top,
+  .newsletter-section,
+  .team-section {
+    padding: 50px 15vw;
+  }
+
+  .aboutus-big-text {
+    font-size: 5rem;
+  }
+
+  .aboutus-medium-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .homepage-navbar {
+    padding: 0 40px;
+  }
+
+  .navbar-links {
+    font-size: 2rem;
+    gap: 30px;
+  }
+
+  .homepage-top-container {
+    padding: 90px 30px;
+  }
+
+  .mission-statement, .mission-description {
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+
+  .image-container {
+    flex-direction: row;
+    padding: 80px 30px;
+    gap: 20px;
+  }
+
+  .right-aligned-container, .left-aligned-container {
+    padding: 0 30px;
+  }
+
+  .what-we-do-sections, .ecosystem-sections {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 1440px) {
+  .homepage-navbar {
+    padding: 0 100px;
+  }
+
+  .navbar-links {
+    font-size: 2.2rem;
+    gap: 50px;
+  }
+
+  .homepage-top-container {
+    padding: 130px 100px;
+  }
+
+  .mission-statement, .mission-description {
+    font-size: 2.5rem;
+    padding: 0 100px;
+  }
+
+  .image-container {
+    padding: 100px 80px;
+  }
+}
 
 /**
  * responsive for larger than 575px screen
@@ -1674,9 +1821,6 @@ margin-block: 10px;
   .footer-top { grid-template-columns: 1fr 1fr; }
 
 }
-
-
-
 
 
 /**
@@ -1734,9 +1878,6 @@ margin-block: 10px;
 }
 
 
-
-
-
 /**
  * responsive for larger than 992px screen
  */
@@ -1750,13 +1891,11 @@ margin-block: 10px;
   .grid-list { grid-template-columns: repeat(3, 1fr); }
 
 
-
   /**
    * INSTRUCTION
    */
 
   .instruction .grid-list { grid-template-columns: repeat(4, 1fr); }
-
 
 
   /**
@@ -1768,9 +1907,6 @@ margin-block: 10px;
   .footer-brand { padding-inline-end: 60px; }
 
 }
-
-
-
 
 
 /**
@@ -1787,6 +1923,7 @@ margin-block: 10px;
     max-width: 1180px;
     width: 100%;
     margin-inline: auto;
+    padding-inline: max(5vw, 20px);
   }
 
   .grid-list { grid-template-columns: repeat(4, 1fr); }
@@ -1817,7 +1954,6 @@ margin-block: 10px;
   .navbar-link { --fs-3: 1.6rem; }
 
 
-
   /**
    * HERO
    */
@@ -1825,13 +1961,11 @@ margin-block: 10px;
   .hero { min-height: 770px; }
 
 
-
   /**
    * TOP SELLER
    */
 
   .top-seller .grid-list { grid-template-columns: repeat(3, 1fr); }
-
 
 
   /**
