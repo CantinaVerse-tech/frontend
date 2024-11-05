@@ -1,123 +1,90 @@
-'use client';
-
-import Image from 'next/image';
 import { TiArrowForwardOutline } from "react-icons/ti";
 import { IoBagAddOutline } from "react-icons/io5";
+import Link from 'next/link';
 
-export function Explorer() {
+const TEMPORARY_IMAGE_URL = 'https://silver-selective-kite-794.mypinata.cloud/ipfs/QmNQq33D3Y1LhftVkHbVJZziuFLQuNLvFmSExwtEcKXcJx';
+
+interface Collection {
+  collectionAddress: string;
+  name: string;
+  owner: string;
+  mintPrice: number;
+  currentSupply: number;
+  maxSupply: number;
+  imageUrl: string;
+}
+
+interface ExplorerProps {
+  collections: Collection[];
+}
+
+const formatAddress = (address: string) => {
+  return `${address.slice(0, 6)}...${address.slice(-4)}`;
+};
+
+export function Explorer({ collections }: ExplorerProps) {
   return (
     <section className="section explore" id="explore">
       <div className="container">
-
         <p className="section-subtitle">Collections</p>
 
         <div className="title-wrapper">
           <h2 className="h2 section-title">Explore</h2>
-
-          <a href="#" className="btn-link">
+          <a href="/explore" className="btn-link">
             <span>Explore All</span>
-
             <TiArrowForwardOutline aria-hidden="true" />
           </a>
         </div>
 
         <ul className="grid-list">
+          {collections.length > 0 ? (
+            collections.map((collection, index) => (
+              <li key={`${collection.collectionAddress}-${index}`}>
+                <div className="card explore-card">
+                  <figure className="card-banner">
+                    <Link href={`/marketplace/explore/`} passHref>
+                      <div>
+                        <img
+                          src={collection.imageUrl || TEMPORARY_IMAGE_URL} // Fallback image
+                          width="250"
+                          height="250"
+                          loading="lazy"
+                          alt={collection.name}
+                          className="img-cover"
+                        />
+                      </div>
+                    </Link>
+                  </figure>
 
-          <li>
-            <div className="card explore-card">
+                  <h3 className="h3 card-title">
+                    <Link href={`/marketplace/explore/`} passHref>
+                      <div>{collection.name}</div>
+                    </Link>
+                  </h3>
 
-              <figure className="card-banner">
-                <a href="#">
-                  <Image src="/assets/auction-1.jpg" width="600" height="600" loading="lazy"
-                    alt="Walking On Air" className="img-cover" />
-                </a>
-              </figure>
+                  <span className="card-author">
+                    Creator:{" "}
+                    <a href={`https://etherscan.io/address/${collection.owner}`} className="author-link">
+                      {formatAddress(collection.owner)} {/* Display shortened address */}
+                    </a>
+                  </span>
+                  <span className="card-author">Max Supply: <a className="wrapper-item"> {collection.maxSupply.toString()}</a></span>
+                  <data className="card-author">Mint Price: <a className="wrapper-item">
+                    {collection.mintPrice.toFixed(2)} ETH </a>
+                  </data>
 
-              <h3 className="h3 card-title">
-                <a href="#">Walking On Air</a>
-              </h3>
-
-              <span className="card-author">
-                Owned By <a href="#" className="author-link">Richard</a>
-              </span>
-
-              <div className="wrapper">
-                <data className="wrapper-item" value="1.5">1.5 ETH</data>
-
-                <span className="wrapper-item">1 of 1</span>
-              </div>
-
-              <button className="btn">
-                <IoBagAddOutline aria-hidden="true" />
-                <span>Place a Bid</span>
-              </button>
-
-            </div>
-          </li>
-
-          <li>
-            <div className="card explore-card">
-
-              <figure className="card-banner">
-                <a href="#">
-                  <Image src="/assets/auction-2.jpg" width="600" height="600" loading="lazy" alt="Domain Names"
-                    className="img-cover" />
-                </a>
-              </figure>
-
-              <h3 className="h3 card-title">
-                <a href="#">Domain Names</a>
-              </h3>
-
-              <span className="card-author">
-                Owned By <a href="#" className="author-link">John Deo</a>
-              </span>
-
-              <div className="wrapper">
-                <data className="wrapper-item" value="2.7">2.7 ETH</data>
-
-                <span className="wrapper-item">1 of 1</span>
-              </div>
-
-              <button className="btn">
-                <IoBagAddOutline aria-hidden="true" />
-                <span>Place a Bid</span>
-              </button>
-
-            </div>
-          </li>
-
-          <li>
-            <div className="card explore-card">
-
-              <figure className="card-banner">
-                <a href="#">
-                  <Image src="/assets/auction-3.jpg" width="600" height="600" loading="lazy" alt="Trading Cards"
-                    className="img-cover" />
-                </a>
-              </figure>
-
-              <h3 className="h3 card-title">
-                <a href="#">Trading Cards</a>
-              </h3>
-
-              <span className="card-author">
-                Owned By <a href="#" className="author-link">Arham</a>
-              </span>
-
-              <div className="wrapper">
-                <data className="wrapper-item" value="2.3">2.3 ETH</data>
-
-                <span className="wrapper-item">1 of 1</span>
-              </div>
-
-              <button className="btn">
-                <IoBagAddOutline aria-hidden="true" />
-                <span>Place a Bid</span>
-              </button>
-
-            </div>
-          </li>
+                  <button className="btn">
+                    <IoBagAddOutline aria-hidden="true" />
+                    <Link href={`/marketplace/explore/`} passHref>
+                      <span>Mint</span>
+                    </Link>
+                  </button>
+                </div>
+              </li>
+            ))
+          ) : (
+            <li>No collections found. Check back later!</li>
+          )}
         </ul>
       </div>
     </section>
