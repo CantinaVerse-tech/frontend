@@ -8,6 +8,16 @@ const nextConfig = {
   output: 'standalone',
   // Add this line
   trailingSlash: false,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'silver-selective-kite-794.mypinata.cloud',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

@@ -4,7 +4,7 @@ import { factoryNFTContractABI } from '../../ABIs/factoryNFTContractABI';
 import { nftContractABI } from '@/ABIs/nftContractABI';
 import Header from '@/components/nftmarketplace/homepage/marketplaceHeader';
 import { Footer } from '../../components/pagesFooter';
-import { parseEther } from 'viem';
+import { parseEther, formatEther } from 'viem';
 
 type EthereumAddress = `0x${string}`;
 
@@ -102,9 +102,9 @@ export default function Explore() {
         setSelectedCollection(collection);
     };
 
-    const fetchMetadata = useCallback(async (tokenURI: string) => {
+    const fetchMetadata = useCallback(async (metadataCID: string) => {
         try {
-            const response = await fetch(tokenURI);
+            const response = await fetch(`https://silver-selective-kite-794.mypinata.cloud/ipfs/${metadataCID}`);
             if (!response.ok) throw new Error("Failed to fetch metadata");
             const metadata = await response.json();
             console.log('Fetched metadata:', metadata); // Log fetched metadata
@@ -114,6 +114,7 @@ export default function Explore() {
             return TEMPORARY_IMAGE_URL; // Fallback image
         }
     }, []);
+
     const updateCollectionImage = useCallback((collectionAddress: string, imageUrl: string) => {
         setCollections(prevCollections =>
             prevCollections.map(c =>
@@ -122,47 +123,44 @@ export default function Explore() {
         );
     }, []);
 
-    useEffect(() => {
-        const fetchAndSetCollections = async () => {
-            if (collectionsData) {
-                const parsedCollections = collectionsData.map((collection) => ({
-                    collectionAddress: collection.collectionAddress,
-                    name: collection.name,
-                    symbol: collection.symbol,
-                    maxSupply: Number(collection.maxSupply),
-                    owner: collection.owner,
-                    royaltyPercentage: Number(collection.royaltyPercentage),
-                    mintPrice: Number(collection.mintPrice),
-                    imageUrl: collection.imageUrl,
-                    metadataURI: collection.metadataURI,
-                }));
+    const fetchAndSetCollections = async () => {
+        if (collectionsData && collectionsData.length > 0) {
+            const parsedCollections = await Promise.all(collectionsData.map(async (collection) => {
+                return {
+                    ...collection,
+                    imageUrl: TEMPORARY_IMAGE_URL,
+                    hasFetchedMetadata: false, // Add a flag to check if metadata has been fetched
+                    mintPrice: parseFloat(formatEther(BigInt(collection.mintPrice))), // Assuming mintPrice is in wei
+                    royaltyPercentage: parseFloat(collection.royaltyPercentage.toString()),
+                };
+            }));
 
-                setCollections(parsedCollections); // Set collections first
+            setCollections(parsedCollections);
 
-                // Fetch token URIs for each collection and update images
-                for (const collection of parsedCollections) {
+            for (const collection of parsedCollections) {
+                // Only fetch if metadata hasn't been fetched yet
+                if (!collection.hasFetchedMetadata) {
                     try {
-                        const tokenURI = useReadContract({
-                            address: collection.collectionAddress as `0x${string}`,
-                            abi: nftContractABI,
-                            functionName: 'tokenURI',
-                            args: [0], // Use a valid token ID
-                        });
-
-                        if (tokenURI.data) {
-                            const imageUrl = await fetchMetadata(tokenURI.data as string);
+                        const imageUrl = await fetchMetadata(collection.metadataURI);
+                        if (imageUrl) {
                             updateCollectionImage(collection.collectionAddress, imageUrl);
                         }
+                        // Set the flag to true after fetching
+                        setCollections(prev =>
+                            prev.map(c =>
+                                c.collectionAddress === collection.collectionAddress ? { ...c, hasFetchedMetadata: true } : c
+                            )
+                        );
                     } catch (error) {
-                        console.error('Failed to fetch tokenURI for collection:', collection.collectionAddress, error);
+                        console.error('Failed to fetch metadata for collection:', collection.collectionAddress, error);
                     }
                 }
             }
-        };
+        }
+    };
 
-        fetchAndSetCollections().catch(error => {
-            console.error("Failed to fetch collections:", error);
-        });
+    useEffect(() => {
+        fetchAndSetCollections().catch(error => console.error("Failed to fetch collections:", error));
     }, [collectionsData, fetchMetadata, updateCollectionImage]);
 
     const handleMint = useCallback(async (collection: NFTCollection) => {
