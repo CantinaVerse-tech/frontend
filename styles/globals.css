@@ -1043,9 +1043,9 @@ body {
 .footer { background-color: var(--xiketic); }
 
 .footer-top {
-  padding-block: var(--section-padding);
   border-block-end: 1px solid hsla(0, 0%, 100%, 0.2);
   display: grid;
+  padding-block: var(--section-padding);
   gap: 50px 40px;
 }
 
@@ -1732,12 +1732,6 @@ margin-block: 10px;
 }
 
 @media (min-width: 1200px) {
-  .footer-top,
-  .newsletter-section,
-  .team-section {
-    padding: 50px 15vw;
-  }
-
   .aboutus-big-text {
     font-size: 5rem;
   }
