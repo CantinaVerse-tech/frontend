@@ -44,11 +44,11 @@ export default function Header() {
               <Link href="/marketplace/create"><div className="navbar-link" data-navlink>Create</div></Link>
             </li>
             <li>
-              <Link href="/marketplace/trade"><div className="navbar-link" data-navlink>List</div></Link>
+              <Link href="/marketplace/listings"><div className="navbar-link" data-navlink>List</div></Link>
             </li>
 
             <li>
-              <Link href="/marketplace/auction"><div className="navbar-link" data-navlink>Auction</div></Link>
+              <Link href="/marketplace/auctions"><div className="navbar-link" data-navlink>Auction</div></Link>
             </li>
           </ul>
         </nav>
