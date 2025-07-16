@@ -8,7 +8,7 @@ export default function TokenCreation() {
             <Header />
             <div className="coming-soon-container">
                 <h1>Coming Soon</h1>
-                <p>We're excited to announce that our new feature is launching in Q4 of 2024.</p>
+                <p>We're excited to announce that our new feature is launching soon.</p>
                 <p>Stay tuned for more details and updates!</p>
                 {/* Optionally, keep the subscription form for updates */}
             </div>
