@@ -12,4 +12,7 @@ export default function ComingSoon({
     showNotifyMe = true 
 }) {
 
+    const [email, setEmail] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
 }
