@@ -15,4 +15,16 @@ export default function ComingSoon({
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
+        const handleNotifySubmit = async (e) => {
+        e.preventDefault();
+        if (!email) return;
+        
+        // Here you would typically send to your backend/newsletter service
+        console.log('Email submitted:', email);
+        setIsSubmitted(true);
+        setEmail('');
+        
+        // Reset after 3 seconds
+        setTimeout(() => setIsSubmitted(false), 3000);
+    };
 }
