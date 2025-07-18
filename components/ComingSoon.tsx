@@ -45,8 +45,46 @@ export default function ComingSoon({
                             Our {feature} is launching soon. Stay tuned for updates!
                         </p>
                     </div>
+
+                    {showNotifyMe && (
+                        <div className="mb-8">
+                            <h3 className="text-lg font-semibold mb-4">Get notified when we launch</h3>
+                            <form onSubmit={handleNotifySubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email"
+                                    className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    required
+                                />
+                                <button
+                                    type="submit"
+                                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                                >
+                                    {isSubmitted ? '✓ Subscribed!' : 'Notify Me'}
+                                </button>
+                            </form>
+                        </div>
+                    )}
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">🔧 In Development</h4>
+                            <p className="text-sm text-gray-600">We're working hard to bring you the best experience</p>
+                        </div>
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">✨ New Features</h4>
+                            <p className="text-sm text-gray-600">Exciting functionality coming your way</p>
+                        </div>
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">🚀 Launch Ready</h4>
+                            <p className="text-sm text-gray-600">Almost there! Final touches being applied</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <Footer />
         </main>
-    )
+    );
 }
