@@ -45,7 +45,8 @@ export default function ComingSoon({
                             Our {feature} is launching soon. Stay tuned for updates!
                         </p>
                     </div>
-                </div>{showNotifyMe && (
+
+                    {showNotifyMe && (
                         <div className="mb-8">
                             <h3 className="text-lg font-semibold mb-4">Get notified when we launch</h3>
                             <form onSubmit={handleNotifySubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -64,7 +65,26 @@ export default function ComingSoon({
                                     {isSubmitted ? '✓ Subscribed!' : 'Notify Me'}
                                 </button>
                             </form>
+                        </div>
+                    )}
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">🔧 In Development</h4>
+                            <p className="text-sm text-gray-600">We're working hard to bring you the best experience</p>
+                        </div>
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">✨ New Features</h4>
+                            <p className="text-sm text-gray-600">Exciting functionality coming your way</p>
+                        </div>
+                        <div className="p-4 bg-gray-50 rounded-lg">
+                            <h4 className="font-semibold mb-2">🚀 Launch Ready</h4>
+                            <p className="text-sm text-gray-600">Almost there! Final touches being applied</p>
+                        </div>
+                    </div>
                 </div>
-        </div>
-    </main>
-)}
+            </div>
+            <Footer />
+        </main>
+    );
+}
