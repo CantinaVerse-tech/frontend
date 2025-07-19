@@ -1,6 +1,7 @@
 'use client';
 import { Footer } from '../components/Footer';
 import Header from '../components/Header';
+import ComingSoon from '../components/ComingSoon';
 
 export default function Governance() {
     return (
