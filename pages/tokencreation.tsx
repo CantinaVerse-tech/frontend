@@ -4,12 +4,12 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function TokenCreation() {
-        return (
+    return (
         <ComingSoon
-            title="Gaming Hub"
-            description="Immersive gaming experiences await"
-            feature="gaming platform"
-            icon="🎮"
+            title="Token Creation Studio"
+            description="Create and deploy your own tokens with ease"
+            feature="token creation toolkit"
+            icon="🪙"
         />
     );
     // return (
