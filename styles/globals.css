@@ -1969,3 +1969,7 @@ margin-block: 10px;
   .instruction { padding-block-end: 120px; }
 
 }
+
+.coming-soon-container {
+    animation: fadeInUp 0.8s ease-out;
+}
