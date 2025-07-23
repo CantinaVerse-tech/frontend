@@ -1984,3 +1984,17 @@ margin-block: 10px;
         transform: translateY(0);
     }
 }
+
+/* Pulse animation for icons */
+.coming-soon-container span {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
