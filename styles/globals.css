@@ -2016,3 +2016,8 @@ margin-block: 10px;
         content: '...';
     }
 }
+
+/* Hover effects for cards */
+.coming-soon-container > div:last-child > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
