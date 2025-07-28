@@ -12,4 +12,10 @@ export default function ProgressRing({
     const circumference = radius * 2 * Math.PI;
     const strokeDashoffset = circumference - (animatedProgress / 100) * circumference;
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimatedProgress(progress);
+        }, 500);
+        return () => clearTimeout(timer);
+    }, [progress]);
 }
