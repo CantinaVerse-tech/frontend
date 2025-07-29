@@ -18,4 +18,27 @@ export default function ProgressRing({
         }, 500);
         return () => clearTimeout(timer);
     }, [progress]);
-}
+
+   return (
+        <div className="flex flex-col items-center">
+            <div className="relative">
+                <svg
+                    className="transform -rotate-90"
+                    width={size}
+                    height={size}
+                >
+                    {/* Background circle */}
+                    <circle
+                        cx={size / 2}
+                        cy={size / 2}
+                        r={radius}
+                        stroke="currentColor"
+                        strokeWidth={strokeWidth}
+                        fill="transparent"
+                        className="text-gray-200"
+                    />
+                    </svg>
+                </div>  
+            </div>
+)}
+
