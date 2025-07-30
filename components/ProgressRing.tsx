@@ -19,7 +19,7 @@ export default function ProgressRing({
         return () => clearTimeout(timer);
     }, [progress]);
 
-   return (
+    return (
         <div className="flex flex-col items-center">
             <div className="relative">
                 <svg
@@ -37,8 +37,28 @@ export default function ProgressRing({
                         fill="transparent"
                         className="text-gray-200"
                     />
-                    </svg>
-                </div>  
+                    {/* Progress circle */}
+                    <circle
+                        cx={size / 2}
+                        cy={size / 2}
+                        r={radius}
+                        stroke="currentColor"
+                        strokeWidth={strokeWidth}
+                        fill="transparent"
+                        strokeDasharray={circumference}
+                        strokeDashoffset={strokeDashoffset}
+                        strokeLinecap="round"
+                        className="text-blue-600 transition-all duration-1000 ease-in-out"
+                    />
+                </svg>
+                {/* Progress text */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-gray-700">
+                        {Math.round(animatedProgress)}%
+                    </span>
+                </div>
             </div>
-)}
-
+            <p className="mt-2 text-sm text-gray-600 text-center">{label}</p>
+        </div>
+    );
+}
