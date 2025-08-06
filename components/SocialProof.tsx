@@ -8,4 +8,21 @@ export default function SocialProof({
 }) {
     const [liveCount, setLiveCount] = useState(subscriberCount);
     const [recentActivity, setRecentActivity] = useState([]);
+
+    useEffect(() => {
+        if (showLiveActivity) {
+            // Simulate live subscriber updates
+            const interval = setInterval(() => {
+                if (Math.random() > 0.7) { // 30% chance every 5 seconds
+                    setLiveCount(prev => prev + 1);
+                    setRecentActivity(prev => [
+                        `Someone just joined the waitlist! 🎉`,
+                        ...prev.slice(0, 2)
+                    ]);
+                }
+            }, 5000);
+
+            return () => clearInterval(interval);
+        }
+    }, [showLiveActivity]);
 }
