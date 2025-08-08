@@ -44,4 +44,20 @@ export default function SocialProof({
                     </span>
                 </div>
             </div>
+            {/* Recent activity */}
+            {recentActivity.length > 0 && (
+                <div className="max-w-md mx-auto">
+                    <h4 className="text-sm font-medium text-gray-500 mb-3 text-center">Recent Activity</h4>
+                    <div className="space-y-2">
+                        {recentActivity.map((activity, index) => (
+                            <div
+                                key={index}
+                                className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3 animate-fadeIn"
+                            >
+                                {activity}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 }
