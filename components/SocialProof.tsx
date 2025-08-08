@@ -32,4 +32,16 @@ export default function SocialProof({
         }
     return count.toString();
     };
+
+        return (
+        <div className="mt-12 space-y-8">
+            {/* Subscriber count */}
+            <div className="text-center">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-50 to-blue-50 px-6 py-3 rounded-full border border-green-200">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-medium text-gray-700">
+                        <span className="font-bold text-green-600">{formatCount(liveCount)}</span> people waiting for launch
+                    </span>
+                </div>
+            </div>
 }
