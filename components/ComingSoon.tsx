@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { Footer } from './Footer';
 import Header from './Header';
+import ProgressRing from './ProgressRing';
+import FeaturePreview from './FeaturePreview';
+import SocialProof from './SocialProof';
 
 export default function ComingSoon({ 
     title = "Coming Soon", 
