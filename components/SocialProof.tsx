@@ -60,4 +60,26 @@ export default function SocialProof({
                     </div>
                 </div>
             )}
+            {/* Development updates */}
+            {recentUpdates.length > 0 && (
+                <div className="max-w-2xl mx-auto">
+                    <h4 className="text-lg font-semibold text-center mb-6">Latest Updates</h4>
+                    <div className="space-y-4">
+                        {recentUpdates.map((update, index) => (
+                            <div key={index} className="flex gap-4 p-4 bg-gray-50 rounded-lg">
+                                <div className="text-2xl">{update.icon}</div>
+                                <div className="flex-1">
+                                    <div className="flex items-center justify-between mb-1">
+                                        <h5 className="font-medium">{update.title}</h5>
+                                        <span className="text-xs text-gray-500">{update.date}</span>
+                                    </div>
+                                    <p className="text-sm text-gray-600">{update.description}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </div>
+    );
 }
