@@ -85,6 +85,13 @@ export default function ComingSoon({
                             <p className="text-sm text-gray-600">Almost there! Final touches being applied</p>
                         </div>
                     </div>
+
+                    {/* Social Proof */}
+                    <SocialProof 
+                        subscriberCount={subscriberCount}
+                        recentUpdates={recentUpdates}
+                        showLiveActivity={true}
+                    />
                 </div>
             </div>
             <Footer />
