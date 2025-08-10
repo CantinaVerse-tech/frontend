@@ -92,6 +92,9 @@ export default function ComingSoon({
                         </div>
                     </div>
 
+                    {/* Feature Preview */}
+                    <FeaturePreview features={features} />
+
                     {/* Social Proof */}
                     <SocialProof 
                         subscriberCount={subscriberCount}
