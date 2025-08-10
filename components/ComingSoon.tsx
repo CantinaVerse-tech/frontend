@@ -71,20 +71,29 @@ export default function ComingSoon({
                         </div>
                     )}
 
+                    {/* Progress Ring */}
+                    <div className="mt-12">
+                        <ProgressRing progress={progress} label="Development Progress" />
+                    </div>
+
+                    {/* Status Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg transform hover:scale-105 transition-transform duration-200">
                             <h4 className="font-semibold mb-2">🔧 In Development</h4>
                             <p className="text-sm text-gray-600">We're working hard to bring you the best experience</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg transform hover:scale-105 transition-transform duration-200">
                             <h4 className="font-semibold mb-2">✨ New Features</h4>
                             <p className="text-sm text-gray-600">Exciting functionality coming your way</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
+                        <div className="p-4 bg-gray-50 rounded-lg transform hover:scale-105 transition-transform duration-200">
                             <h4 className="font-semibold mb-2">🚀 Launch Ready</h4>
                             <p className="text-sm text-gray-600">Almost there! Final touches being applied</p>
                         </div>
                     </div>
+
+                    {/* Feature Preview */}
+                    <FeaturePreview features={features} />
 
                     {/* Social Proof */}
                     <SocialProof 
