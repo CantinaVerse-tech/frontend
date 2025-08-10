@@ -71,6 +71,11 @@ export default function ComingSoon({
                         </div>
                     )}
 
+                    {/* Progress Ring */}
+                    <div className="mt-12">
+                        <ProgressRing progress={progress} label="Development Progress" />
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                         <div className="p-4 bg-gray-50 rounded-lg">
                             <h4 className="font-semibold mb-2">🔧 In Development</h4>
