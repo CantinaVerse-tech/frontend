@@ -12,13 +12,16 @@ export default function ComingSoon({
     description = "We're building something amazing for you.",
     feature = "new feature",
     icon = "🚀",
-    showNotifyMe = true 
+    showNotifyMe = true,
+    progress = 75,
+    features = [],
+    recentUpdates = [],
+    subscriberCount = 1247
 }) {
-
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-        const handleNotifySubmit = async (e) => {
+    const handleNotifySubmit = async (e) => {
         e.preventDefault();
         if (!email) return;
         
