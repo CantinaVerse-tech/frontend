@@ -4,6 +4,15 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function Governance() {
+        const features = [
+        {
+            name: "Proposal System",
+            icon: "📝",
+            description: "Create and submit governance proposals for community voting",
+            highlights: ["Smart Contract Integration", "Multi-signature Support", "Automated Execution"],
+            status: "In Progress"
+        }
+            ];
     return (
         <ComingSoon
             title="Governance Portal"
