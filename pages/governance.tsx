@@ -11,6 +11,13 @@ export default function Governance() {
             description: "Create and submit governance proposals for community voting",
             highlights: ["Smart Contract Integration", "Multi-signature Support", "Automated Execution"],
             status: "In Progress"
+        },
+        {
+            name: "Voting Mechanism",
+            icon: "🗳️",
+            description: "Secure, transparent voting with token-weighted governance",
+            highlights: ["Gasless Voting", "Delegation", "Quadratic Voting"],
+            status: "Testing"
         }
             ];
     return (
