@@ -18,6 +18,13 @@ export default function Governance() {
             description: "Secure, transparent voting with token-weighted governance",
             highlights: ["Gasless Voting", "Delegation", "Quadratic Voting"],
             status: "Testing"
+        },
+        {
+            name: "Treasury Management",
+            icon: "💰",
+            description: "Community-controlled treasury with transparent fund allocation",
+            highlights: ["Multi-sig Wallet", "Streaming Payments", "Budget Tracking"],
+            status: "Planning"
         }
             ];
     return (
