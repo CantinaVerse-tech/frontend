@@ -27,6 +27,15 @@ export default function Governance() {
             status: "Planning"
         }
             ];
+
+const recentUpdates = [
+        {
+            title: "Smart Contract Audit Completed",
+            description: "All governance contracts have passed security audit with zero critical issues",
+            date: "2 days ago",
+            icon: "🔒"
+        },
+       ];
     return (
         <ComingSoon
             title="Governance Portal"
