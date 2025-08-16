@@ -35,7 +35,14 @@ const recentUpdates = [
             date: "2 days ago",
             icon: "🔒"
         },
-       ];
+        {
+            title: "UI/UX Design Finalized",
+            description: "Community feedback incorporated into final governance portal design",
+            date: "1 week ago",
+            icon: "🎨"
+        }
+    ];
+        
     return (
         <ComingSoon
             title="Governance Portal"
