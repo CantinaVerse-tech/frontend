@@ -42,23 +42,18 @@ export default function TokenCreation() {
             icon: "📚"
         }
     ];
+
     return (
         <ComingSoon
             title="Token Creation Studio"
-            description="Create and deploy your own tokens with ease"
+            description="Build and deploy tokens with professional-grade tools"
             feature="token creation toolkit"
             icon="🪙"
+            progress={65}
+            features={features}
+            recentUpdates={recentUpdates}
+            subscriberCount={892}
         />
     );
-    // return (
-    //     <main>
-    //         <Header />
-    //         <div className="coming-soon-container">
-    //             <h1>Coming Soon</h1>
-    //             <p>We're excited to announce that our new feature is launching soon.</p>
-    //             <p>Stay tuned for more details and updates!</p>
-    //         </div>
-    //         <Footer />
-    //     </main>
-    // );
+}
 }
