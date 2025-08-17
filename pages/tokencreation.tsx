@@ -27,6 +27,15 @@ export default function TokenCreation() {
             status: "Planning"
         }
     ];
+
+    const recentUpdates = [
+        {
+            title: "Foundry Integration Complete",
+            description: "Full Foundry framework integration for advanced testing and deployment",
+            date: "3 days ago",
+            icon: "⚙️"
+        }
+    ];
     return (
         <ComingSoon
             title="Token Creation Studio"
