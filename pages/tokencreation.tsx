@@ -34,6 +34,12 @@ export default function TokenCreation() {
             description: "Full Foundry framework integration for advanced testing and deployment",
             date: "3 days ago",
             icon: "⚙️"
+        },
+        {
+            title: "Template Library Expanded",
+            description: "Added 15 new token templates including DeFi and NFT utilities",
+            date: "1 week ago",
+            icon: "📚"
         }
     ];
     return (
