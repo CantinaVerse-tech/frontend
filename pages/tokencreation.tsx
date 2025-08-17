@@ -11,6 +11,13 @@ export default function TokenCreation() {
             description: "Create tokens without writing a single line of code",
             highlights: ["Drag & Drop", "Template Library", "Real-time Preview"],
             status: "Testing"
+        },
+        {
+            name: "Advanced Features",
+            icon: "⚡",
+            description: "Add sophisticated tokenomics and utility features",
+            highlights: ["Staking Rewards", "Burn Mechanisms", "Governance Rights"],
+            status: "In Progress"
         }
     ];
     return (
