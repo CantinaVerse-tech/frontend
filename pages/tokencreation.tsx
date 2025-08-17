@@ -18,6 +18,13 @@ export default function TokenCreation() {
             description: "Add sophisticated tokenomics and utility features",
             highlights: ["Staking Rewards", "Burn Mechanisms", "Governance Rights"],
             status: "In Progress"
+        },
+        {
+            name: "Deploy Anywhere",
+            icon: "🌐",
+            description: "Launch on multiple chains with one-click deployment",
+            highlights: ["Multi-chain Support", "Gas Optimization", "Instant Launch"],
+            status: "Planning"
         }
     ];
     return (
