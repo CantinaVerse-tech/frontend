@@ -46,20 +46,13 @@ const recentUpdates = [
     return (
         <ComingSoon
             title="Governance Portal"
-            description="Participate in shaping the future of our platform"
+            description="Shape the future through decentralized governance"
             feature="governance system"
             icon="🗳️"
+            progress={82}
+            features={features}
+            recentUpdates={recentUpdates}
+            subscriberCount={1523}
         />
     );
-    // return (
-    //     <main>
-    //         <Header />
-    //         <div className="coming-soon-container">
-    //             <h1>Coming Soon</h1>
-    //             <p>We're excited to announce that our new feature is launching soon.</p>
-    //             <p>Stay tuned for more details and updates!</p>
-    //         </div>
-    //         <Footer />
-    //     </main>
-    // );
 }
