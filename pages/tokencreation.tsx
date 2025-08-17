@@ -4,6 +4,15 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function TokenCreation() {
+        const features = [
+        {
+            name: "No-Code Builder",
+            icon: "🛠️",
+            description: "Create tokens without writing a single line of code",
+            highlights: ["Drag & Drop", "Template Library", "Real-time Preview"],
+            status: "Testing"
+        }
+    ];
     return (
         <ComingSoon
             title="Token Creation Studio"
