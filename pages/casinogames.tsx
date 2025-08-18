@@ -11,6 +11,13 @@ export default function Gaming() {
             description: "Play-to-earn games with NFT rewards and marketplace integration",
             highlights: ["P2E Mechanics", "NFT Rewards", "Cross-game Assets"],
             status: "In Progress"
+        },
+        {
+            name: "Tournament System",
+            icon: "🏆",
+            description: "Competitive gaming with automated prize distribution",
+            highlights: ["Smart Contracts", "Live Leaderboards", "Prize Pools"],
+            status: "Testing"
         }
     ]
     return (
