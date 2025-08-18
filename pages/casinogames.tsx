@@ -34,8 +34,14 @@ export default function Gaming() {
             description: "Successfully integrated Unity SDK for seamless Web3 gaming experience",
             date: "4 days ago",
             icon: "🎮"
+        },
+        {
+            title: "Beta Testing Started",
+            description: "Closed beta with 100 selected users providing valuable feedback",
+            date: "2 weeks ago",
+            icon: "🧪"
         }
-     ];
+    ];
     return (
         <ComingSoon
             title="Gaming Hub"
