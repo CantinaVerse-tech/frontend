@@ -18,8 +18,15 @@ export default function Gaming() {
             description: "Competitive gaming with automated prize distribution",
             highlights: ["Smart Contracts", "Live Leaderboards", "Prize Pools"],
             status: "Testing"
+        },
+        {
+            name: "Social Features",
+            icon: "👥",
+            description: "Connect with other players and form gaming communities",
+            highlights: ["Guild System", "Chat Integration", "Achievement Sharing"],
+            status: "Planning"
         }
-    ]
+    ];
     return (
         <ComingSoon
             title="Gaming Hub"
