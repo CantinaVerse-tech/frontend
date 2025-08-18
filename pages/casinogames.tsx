@@ -42,23 +42,17 @@ export default function Gaming() {
             icon: "🧪"
         }
     ];
+
     return (
         <ComingSoon
             title="Gaming Hub"
-            description="Immersive gaming experiences await"
+            description="Where blockchain meets immersive gaming experiences"
             feature="gaming platform"
             icon="🎮"
+            progress={58}
+            features={features}
+            recentUpdates={recentUpdates}
+            subscriberCount={2156}
         />
     );
-    // return (
-    //     <main>
-    //         <Header />
-    //         <div className="coming-soon-container">
-    //             <h1>Coming Soon</h1>
-    //             <p>We're excited to announce that our new feature is launching soon.</p>
-    //             <p>Stay tuned for more details and updates!</p>
-    //         </div>
-    //         <Footer />
-    //     </main>
-    // );
 }
