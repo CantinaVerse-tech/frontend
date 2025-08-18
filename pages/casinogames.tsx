@@ -27,6 +27,15 @@ export default function Gaming() {
             status: "Planning"
         }
     ];
+
+    const recentUpdates = [
+        {
+            title: "Game Engine Integration",
+            description: "Successfully integrated Unity SDK for seamless Web3 gaming experience",
+            date: "4 days ago",
+            icon: "🎮"
+        }
+     ];
     return (
         <ComingSoon
             title="Gaming Hub"
