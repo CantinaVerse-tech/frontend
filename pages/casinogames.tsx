@@ -4,6 +4,15 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function Gaming() {
+        const features = [
+        {
+            name: "NFT Gaming",
+            icon: "🎲",
+            description: "Play-to-earn games with NFT rewards and marketplace integration",
+            highlights: ["P2E Mechanics", "NFT Rewards", "Cross-game Assets"],
+            status: "In Progress"
+        }
+    ]
     return (
         <ComingSoon
             title="Gaming Hub"
