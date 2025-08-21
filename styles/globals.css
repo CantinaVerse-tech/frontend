@@ -2027,6 +2027,11 @@ margin-block: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Add to your global CSS or component styles */
+.coming-soon-container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
 /* Loading dots animation */
 .loading-dots::after {
     content: '';
