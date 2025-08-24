@@ -2063,6 +2063,10 @@ margin-block: 10px;
     }
 }
 
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in;
+}
+
 /* Loading dots animation */
 .loading-dots::after {
     content: '';
