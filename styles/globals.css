@@ -2053,6 +2053,16 @@ margin-block: 10px;
     }
 }
 
+/* Fade in animation for dynamic content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* Loading dots animation */
 .loading-dots::after {
     content: '';
