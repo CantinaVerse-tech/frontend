@@ -2027,16 +2027,6 @@ margin-block: 10px;
     }
 }
 
-/* Hover effects for cards */
-.coming-soon-container > div:last-child > div {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.coming-soon-container > div:last-child > div:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 /* Add to your global CSS or component styles */
 .coming-soon-container {
     animation: fadeInUp 0.8s ease-out;
@@ -2067,6 +2057,20 @@ margin-block: 10px;
     animation: fadeIn 0.5s ease-in;
 }
 
+/* Pulse animation for icons */
+.coming-soon-container span {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
 /* Loading dots animation */
 .loading-dots::after {
     content: '';
@@ -2085,6 +2089,16 @@ margin-block: 10px;
     }
 }
 
+/* Hover effects for cards */
+.coming-soon-container > div:last-child > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coming-soon-container > div:last-child > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* Gradient text animation */
 @keyframes gradient {
     0% {
@@ -2096,4 +2110,13 @@ margin-block: 10px;
     100% {
         background-position: 0% 50%;
     }
+}
+
+.animate-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 4s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
