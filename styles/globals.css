@@ -2027,16 +2027,6 @@ margin-block: 10px;
     }
 }
 
-/* Hover effects for cards */
-.coming-soon-container > div:last-child > div {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.coming-soon-container > div:last-child > div:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 /* Add to your global CSS or component styles */
 .coming-soon-container {
     animation: fadeInUp 0.8s ease-out;
@@ -2097,6 +2087,16 @@ margin-block: 10px;
     60%, 100% {
         content: '...';
     }
+}
+
+/* Hover effects for cards */
+.coming-soon-container > div:last-child > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.coming-soon-container > div:last-child > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Gradient text animation */
