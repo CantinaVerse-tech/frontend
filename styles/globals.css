@@ -2067,6 +2067,7 @@ margin-block: 10px;
     animation: fadeIn 0.5s ease-in;
 }
 
+/* Pulse animation for icons */
 .coming-soon-container span {
     animation: pulse 2s infinite;
 }
