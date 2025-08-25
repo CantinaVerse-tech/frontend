@@ -2067,6 +2067,10 @@ margin-block: 10px;
     animation: fadeIn 0.5s ease-in;
 }
 
+.coming-soon-container span {
+    animation: pulse 2s infinite;
+}
+
 /* Loading dots animation */
 .loading-dots::after {
     content: '';
