@@ -2150,3 +2150,7 @@ margin-block: 10px;
     background-size: 800px 104px;
     animation: shimmer 1.5s infinite linear;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
