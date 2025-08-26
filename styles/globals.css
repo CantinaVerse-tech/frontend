@@ -2130,3 +2130,7 @@ margin-block: 10px;
         transform: translateY(-10px);
     }
 }
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
