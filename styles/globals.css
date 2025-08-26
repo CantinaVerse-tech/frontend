@@ -2151,6 +2151,7 @@ margin-block: 10px;
     animation: shimmer 1.5s infinite linear;
 }
 
+/* Custom scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
