@@ -2164,3 +2164,7 @@ margin-block: 10px;
     background: #888;
     border-radius: 10px;
 }
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
