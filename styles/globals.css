@@ -2134,3 +2134,12 @@ margin-block: 10px;
 .animate-float {
     animation: float 3s ease-in-out infinite;
 }
+
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
