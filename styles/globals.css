@@ -2135,6 +2135,7 @@ margin-block: 10px;
     animation: float 3s ease-in-out infinite;
 }
 
+/* Shimmer effect for loading states */
 @keyframes shimmer {
     0% {
         background-position: -468px 0;
