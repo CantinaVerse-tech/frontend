@@ -8,3 +8,6 @@ export default function CountdownTimer({ targetDate, onComplete }) {
         minutes: 0,
         seconds: 0
     });
+      const [isComplete, setIsComplete] = useState(false);
+}
+
