@@ -2121,6 +2121,7 @@ margin-block: 10px;
     -webkit-text-fill-color: transparent;
 }
 
+/* Floating animation for icons */
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
