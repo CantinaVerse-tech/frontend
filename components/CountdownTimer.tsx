@@ -29,5 +29,9 @@ export default function CountdownTimer({ targetDate, onComplete }) {
                 seconds: Math.floor((distance % (1000 * 60)) / 1000)
             });
         }, 1000);
+            
+        return () => clearInterval(timer);
+    }, [targetDate, onComplete]);
+
 }
 
