@@ -33,5 +33,13 @@ export default function CountdownTimer({ targetDate, onComplete }) {
         return () => clearInterval(timer);
     }, [targetDate, onComplete]);
 
+        if (isComplete) {
+        return (
+            <div className="text-center py-8">
+                <h2 className="text-3xl font-bold text-green-600 mb-2">🎉 We're Live!</h2>
+                <p className="text-gray-600">Thank you for waiting. Check out our new features!</p>
+            </div>
+        );
+    }
 }
 
