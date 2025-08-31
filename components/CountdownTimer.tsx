@@ -41,5 +41,18 @@ export default function CountdownTimer({ targetDate, onComplete }) {
             </div>
         );
     }
-}
 
+    return (
+        <div className="text-center py-8">
+            <h3 className="text-lg font-semibold mb-6 text-gray-700">Launch Countdown</h3>
+            <div className="flex justify-center gap-4">
+                {Object.entries(timeLeft).map(([unit, value]) => (
+                    <div key={unit} className="bg-white rounded-lg shadow-lg p-4 min-w-[80px]">
+                        <div className="text-2xl font-bold text-blue-600">{value}</div>
+                        <div className="text-xs uppercase text-gray-500 mt-1">{unit}</div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
+}
