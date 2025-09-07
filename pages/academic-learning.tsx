@@ -9,5 +9,12 @@ export default function AcademicLearning() {
             description: "Comprehensive blockchain and smart contract development courses with hands-on coding exercises",
             highlights: ["Video Tutorials", "Code Playgrounds", "Real-time Feedback", "Progress Tracking"],
             status: "In Progress"
+        },
+        {
+            name: "Certification System",
+            icon: "🎓",
+            description: "Earn verifiable NFT certificates upon course completion, stored permanently on-chain",
+            highlights: ["NFT Certificates", "Skills Verification", "Portfolio Integration", "Employer Recognition"],
+            status: "Testing"
         }
 }
