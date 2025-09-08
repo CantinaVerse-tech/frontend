@@ -23,5 +23,12 @@ export default function AcademicLearning() {
             description: "Study groups, mentorship programs, and collaborative learning environments",
             highlights: ["Study Groups", "Mentor Matching", "Code Reviews", "Discussion Forums"],
             status: "Planning"
+        },
+        {
+            name: "Practice Labs",
+            icon: "🔬",
+            description: "Sandbox environments for experimenting with smart contracts and DeFi protocols",
+            highlights: ["Testnet Integration", "Safe Experimentation", "Template Libraries", "Gas-free Testing"],
+            status: "In Progress"
         }
 }
