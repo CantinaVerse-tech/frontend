@@ -30,5 +30,12 @@ export default function AcademicLearning() {
             description: "Sandbox environments for experimenting with smart contracts and DeFi protocols",
             highlights: ["Testnet Integration", "Safe Experimentation", "Template Libraries", "Gas-free Testing"],
             status: "In Progress"
+        },
+        {
+            name: "Career Pathways",
+            icon: "🚀",
+            description: "Structured learning paths from beginner to advanced blockchain developer",
+            highlights: ["Skill Assessments", "Custom Roadmaps", "Industry Projects", "Job Placement"],
+            status: "Planning"
         }
 }
