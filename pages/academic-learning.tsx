@@ -37,5 +37,12 @@ export default function AcademicLearning() {
             description: "Structured learning paths from beginner to advanced blockchain developer",
             highlights: ["Skill Assessments", "Custom Roadmaps", "Industry Projects", "Job Placement"],
             status: "Planning"
+        },
+        {
+            name: "Research Hub",
+            icon: "🔍",
+            description: "Access to cutting-edge research papers, whitepapers, and industry insights",
+            highlights: ["Research Database", "Expert Analysis", "Trend Reports", "Academic Partnerships"],
+            status: "Planning"
         }
-}
+    ];
