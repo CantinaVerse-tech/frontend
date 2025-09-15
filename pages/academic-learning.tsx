@@ -46,3 +46,5 @@ export default function AcademicLearning() {
             status: "Planning"
         }
     ];
+
+    const recentUpdates = []
