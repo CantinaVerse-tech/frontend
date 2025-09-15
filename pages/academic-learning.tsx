@@ -46,3 +46,12 @@ export default function AcademicLearning() {
             status: "Planning"
         }
     ];
+
+    const recentUpdates = [
+                  {
+            title: "Foundry Course Module Completed",
+            description: "Comprehensive Foundry framework course with 15 hands-on projects now ready for beta testing",
+            date: "2 days ago",
+            icon: "⚒️"
+        }
+    ]
