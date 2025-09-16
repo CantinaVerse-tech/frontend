@@ -53,5 +53,11 @@ export default function AcademicLearning() {
             description: "Comprehensive Foundry framework course with 15 hands-on projects now ready for beta testing",
             date: "2 days ago",
             icon: "⚒️"
+        },
+        {
+            title: "Partnership with Leading University",
+            description: "Signed partnership agreement to integrate our curriculum into computer science programs",
+            date: "1 week ago",
+            icon: "🏫"
         }
     ]
