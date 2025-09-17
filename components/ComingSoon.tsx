@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { Footer } from './Footer';
 import Header from './Header';
 import ProgressRing from './ProgressRing';
-import FeaturePreview from './FeaturePreview';
+import FeaturePreview from './PreviewCard';
 import SocialProof from './SocialProof';
 
-export default function ComingSoon({ 
-    title = "Coming Soon", 
+export default function ComingSoon({
+    title = "Coming Soon",
     description = "We're building something amazing for you.",
     feature = "new feature",
     icon = "🚀",
@@ -21,15 +21,15 @@ export default function ComingSoon({
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleNotifySubmit = async (e) => {
+    const handleNotifySubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if (!email) return;
-        
+
         // Here you would typically send to your backend/newsletter service
         console.log('Email submitted:', email);
         setIsSubmitted(true);
         setEmail('');
-        
+
         // Reset after 3 seconds
         setTimeout(() => setIsSubmitted(false), 3000);
     };
@@ -99,7 +99,7 @@ export default function ComingSoon({
                     <FeaturePreview features={features} />
 
                     {/* Social Proof */}
-                    <SocialProof 
+                    <SocialProof
                         subscriberCount={subscriberCount}
                         recentUpdates={recentUpdates}
                         showLiveActivity={true}

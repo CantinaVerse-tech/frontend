@@ -1,13 +1,27 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-export default function SocialProof({ 
+// Define interfaces for the props
+interface RecentUpdate {
+    title: string;
+    description: string;
+    date: string;
+    icon: string;
+}
+
+interface SocialProofProps {
+    subscriberCount?: number;
+    recentUpdates?: RecentUpdate[];
+    showLiveActivity?: boolean;
+}
+
+export default function SocialProof({
     subscriberCount = 1247,
     recentUpdates = [],
-    showLiveActivity = true 
-}) {
-    const [liveCount, setLiveCount] = useState(subscriberCount);
-    const [recentActivity, setRecentActivity] = useState([]);
+    showLiveActivity = true
+}: SocialProofProps) {
+    const [liveCount, setLiveCount] = useState<number>(subscriberCount);
+    const [recentActivity, setRecentActivity] = useState<string[]>([]); // Explicitly type as string array
 
     useEffect(() => {
         if (showLiveActivity) {
@@ -26,14 +40,14 @@ export default function SocialProof({
         }
     }, [showLiveActivity]);
 
-    const formatCount = (count) => {
+    const formatCount = (count: number): string => {
         if (count >= 1000) {
             return `${(count / 1000).toFixed(1)}k`;
         }
-    return count.toString();
+        return count.toString();
     };
 
-        return (
+    return (
         <div className="mt-12 space-y-8">
             {/* Subscriber count */}
             <div className="text-center">
@@ -44,6 +58,7 @@ export default function SocialProof({
                     </span>
                 </div>
             </div>
+
             {/* Recent activity */}
             {recentActivity.length > 0 && (
                 <div className="max-w-md mx-auto">
@@ -60,6 +75,7 @@ export default function SocialProof({
                     </div>
                 </div>
             )}
+
             {/* Development updates */}
             {recentUpdates.length > 0 && (
                 <div className="max-w-2xl mx-auto">

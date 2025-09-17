@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function Gaming() {
-        const features = [
+    const features = [
         {
             name: "NFT Gaming",
             icon: "🎲",
@@ -50,8 +50,6 @@ export default function Gaming() {
             feature="gaming platform"
             icon="🎮"
             progress={58}
-            features={features}
-            recentUpdates={recentUpdates}
             subscriberCount={2156}
         />
     );
