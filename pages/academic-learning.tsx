@@ -59,6 +59,12 @@ export default function AcademicLearning() {
             description: "Signed partnership agreement to integrate our curriculum into computer science programs",
             date: "1 week ago",
             icon: "🏫"
+        },
+        {
+            title: "Expert Instructor Onboarding",
+            description: "10 industry experts and professors have joined as course instructors and mentors",
+            date: "2 weeks ago",
+            icon: "👨‍🏫"
         }
     ]; // ADDED missing semicolon
 
