@@ -2,7 +2,7 @@
 import ComingSoon from '../components/ComingSoon';
 
 export default function AcademicLearning() {
-      const features = [
+    const features = [
         {
             name: "Interactive Courses",
             icon: "📚",
@@ -48,7 +48,7 @@ export default function AcademicLearning() {
     ];
 
     const recentUpdates = [
-                  {
+        {
             title: "Foundry Course Module Completed",
             description: "Comprehensive Foundry framework course with 15 hands-on projects now ready for beta testing",
             date: "2 days ago",
@@ -60,4 +60,17 @@ export default function AcademicLearning() {
             date: "1 week ago",
             icon: "🏫"
         }
-    ]
+    ]; // ADDED missing semicolon
+
+    return (
+        <ComingSoon
+            title="Academic Learning Hub"
+            description="Master blockchain development through structured learning"
+            feature="learning platform"
+            icon="🎓"
+            progress={42}
+            features={features}
+            subscriberCount={756}
+        />
+    );
+} // ADDED missing closing brace
