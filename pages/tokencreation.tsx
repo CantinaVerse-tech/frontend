@@ -1,10 +1,8 @@
 'use client';
-import { Footer } from '../components/Footer';
-import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function TokenCreation() {
-        const features = [
+    const features = [
         {
             name: "No-Code Builder",
             icon: "🛠️",
@@ -51,9 +49,7 @@ export default function TokenCreation() {
             icon="🪙"
             progress={65}
             features={features}
-            recentUpdates={recentUpdates}
             subscriberCount={892}
         />
     );
-}
-}
+} // REMOVED the extra closing brace that was here
