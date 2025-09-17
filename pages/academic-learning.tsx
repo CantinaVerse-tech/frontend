@@ -59,17 +59,29 @@ export default function AcademicLearning() {
             description: "Signed partnership agreement to integrate our curriculum into computer science programs",
             date: "1 week ago",
             icon: "🏫"
+        },
+        {
+            title: "Expert Instructor Onboarding",
+            description: "10 industry experts and professors have joined as course instructors and mentors",
+            date: "2 weeks ago",
+            icon: "👨‍🏫"
+        },
+        {
+            title: "NFT Certificate Smart Contracts",
+            description: "Completed development and audit of certificate issuance smart contracts on testnet",
+            date: "3 weeks ago",
+            icon: "🏆"
         }
-    ]; // ADDED missing semicolon
+    ];
 
     return (
         <ComingSoon
             title="Academic Learning Hub"
-            description="Master blockchain development through structured learning"
-            feature="learning platform"
+            description="Master blockchain development through structured, university-grade education"
+            feature="educational platform"
             icon="🎓"
-            progress={42}
-            subscriberCount={756}
+            progress={71}
+            subscriberCount={3847}
         />
     );
-} // ADDED missing closing brace
+}
