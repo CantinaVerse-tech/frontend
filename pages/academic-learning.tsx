@@ -77,11 +77,11 @@ export default function AcademicLearning() {
     return (
         <ComingSoon
             title="Academic Learning Hub"
-            description="Master blockchain development through structured learning"
-            feature="learning platform"
+            description="Master blockchain development through structured, university-grade education"
+            feature="educational platform"
             icon="🎓"
-            progress={42}
-            subscriberCount={756}
+            progress={71}
+            subscriberCount={3847}
         />
     );
-} // ADDED missing closing brace
+}
