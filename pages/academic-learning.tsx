@@ -65,8 +65,14 @@ export default function AcademicLearning() {
             description: "10 industry experts and professors have joined as course instructors and mentors",
             date: "2 weeks ago",
             icon: "👨‍🏫"
+        },
+        {
+            title: "NFT Certificate Smart Contracts",
+            description: "Completed development and audit of certificate issuance smart contracts on testnet",
+            date: "3 weeks ago",
+            icon: "🏆"
         }
-    ]; // ADDED missing semicolon
+    ];
 
     return (
         <ComingSoon
