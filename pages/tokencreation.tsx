@@ -48,7 +48,6 @@ export default function TokenCreation() {
             feature="token creation toolkit"
             icon="🪙"
             progress={65}
-            features={features}
             subscriberCount={892}
         />
     );

@@ -69,7 +69,6 @@ export default function AcademicLearning() {
             feature="learning platform"
             icon="🎓"
             progress={42}
-            features={features}
             subscriberCount={756}
         />
     );

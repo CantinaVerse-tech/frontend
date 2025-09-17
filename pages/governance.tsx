@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import ComingSoon from '../components/ComingSoon';
 
 export default function Governance() {
-        const features = [
+    const features = [
         {
             name: "Proposal System",
             icon: "📝",
@@ -26,9 +26,9 @@ export default function Governance() {
             highlights: ["Multi-sig Wallet", "Streaming Payments", "Budget Tracking"],
             status: "Planning"
         }
-            ];
+    ];
 
-const recentUpdates = [
+    const recentUpdates = [
         {
             title: "Smart Contract Audit Completed",
             description: "All governance contracts have passed security audit with zero critical issues",
@@ -42,7 +42,7 @@ const recentUpdates = [
             icon: "🎨"
         }
     ];
-        
+
     return (
         <ComingSoon
             title="Governance Portal"
@@ -50,8 +50,6 @@ const recentUpdates = [
             feature="governance system"
             icon="🗳️"
             progress={82}
-            features={features}
-            recentUpdates={recentUpdates}
             subscriberCount={1523}
         />
     );
