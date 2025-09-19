@@ -1,8 +1,5 @@
 'use client';
-
-function useState(arg0: string): [any, any] {
-    throw new Error("Function not implemented.");
-}
+import { useState } from 'react';
 
 export default function NewsletterSignup({ 
     benefits = [
@@ -13,6 +10,7 @@ export default function NewsletterSignup({
     ],
     incentive = "Get a free NFT when you join!" 
 }) {
-        const [email, setEmail] = useState('');
+    const [email, setEmail] = useState('');
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 }
-
