@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 export default function NewsletterSignup({ 
     benefits = [
         "Early access to beta features",
