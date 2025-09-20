@@ -13,4 +13,21 @@ export default function NewsletterSignup({
     const [email, setEmail] = useState('');
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        if (!email) return;
+        
+        setIsLoading(true);
+        
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        setIsSubmitted(true);
+        setIsLoading(false);
+        setEmail('');
+        
+        // Reset after showing success
+        setTimeout(() => setIsSubmitted(false), 5000);
+    };
 }
