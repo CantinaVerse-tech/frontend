@@ -43,4 +43,15 @@ export default function NewsletterSignup({
             </div>
         );
     }
+
+    return (
+        <div className="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-2xl p-8 border border-blue-200">
+            <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Join Our Community
+                </h3>
+                <p className="text-gray-600 mb-2">{incentive}</p>
+            </div>
+        </div>
+    )
 }
