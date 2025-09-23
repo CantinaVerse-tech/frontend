@@ -52,6 +52,30 @@ export default function NewsletterSignup({
                 </h3>
                 <p className="text-gray-600 mb-2">{incentive}</p>
             </div>
+            <form onSubmit={handleSubmit} className="mb-6">
+                <div className="flex flex-col sm:flex-row gap-3">
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Enter your email address"
+                        className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        required
+                        disabled={isLoading}
+                    />
+                    <button
+                        type="submit"
+                        disabled={isLoading || !email}
+                        className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center min-w-[120px]"
+                    >
+                        {isLoading ? (
+                            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                        ) : (
+                            'Get Early Access'
+                        )}
+                    </button>
+                </div>
+            </form>
         </div>
     )
 }
