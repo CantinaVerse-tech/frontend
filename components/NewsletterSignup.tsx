@@ -76,6 +76,16 @@ export default function NewsletterSignup({
                     </button>
                 </div>
             </form>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
+                        <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        </div>
+                        {benefit}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
