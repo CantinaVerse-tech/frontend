@@ -76,6 +76,7 @@ export default function NewsletterSignup({
                     </button>
                 </div>
             </form>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-2 text-sm text-gray-600">
@@ -86,6 +87,10 @@ export default function NewsletterSignup({
                     </div>
                 ))}
             </div>
+
+            <div className="mt-6 text-xs text-gray-500 text-center">
+                No spam. Unsubscribe anytime. We respect your privacy.
+            </div>
         </div>
-    )
+    );
 }
