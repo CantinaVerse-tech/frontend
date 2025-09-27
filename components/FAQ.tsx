@@ -1,4 +1,13 @@
 'use client';
 import { useState } from 'react';
 
-export default function FAQ({ faqs = [] }) {}
+export default function FAQ({ faqs = [] }) {
+        const [openIndex, setOpenIndex] = useState(0);
+
+    const defaultFAQs = [
+        {
+            question: "What makes your platform different from other learning platforms?",
+            answer: "We focus specifically on practical blockchain development with modern tools like Foundry. Our courses include real smart contract projects, NFT certificates, and direct integration with development environments. Plus, everything is built by experienced developers who understand the challenges of learning Web3 development."
+        },
+    ]
+}
