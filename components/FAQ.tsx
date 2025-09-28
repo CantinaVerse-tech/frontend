@@ -9,5 +9,9 @@ export default function FAQ({ faqs = [] }) {
             question: "What makes your platform different from other learning platforms?",
             answer: "We focus specifically on practical blockchain development with modern tools like Foundry. Our courses include real smart contract projects, NFT certificates, and direct integration with development environments. Plus, everything is built by experienced developers who understand the challenges of learning Web3 development."
         },
+        {
+            question: "Do I need prior programming experience?",
+            answer: "While helpful, it's not required! We offer courses for all levels, from complete beginners to advanced developers. Our beginner track covers programming fundamentals alongside blockchain concepts, ensuring you build a solid foundation."
+        },
     ]
 }
