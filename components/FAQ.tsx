@@ -13,5 +13,9 @@ export default function FAQ({ faqs = [] }) {
             question: "Do I need prior programming experience?",
             answer: "While helpful, it's not required! We offer courses for all levels, from complete beginners to advanced developers. Our beginner track covers programming fundamentals alongside blockchain concepts, ensuring you build a solid foundation."
         },
+        {
+            question: "What programming languages and tools will I learn?",
+            answer: "Our curriculum focuses on Solidity for smart contracts, JavaScript/TypeScript for full-stack development, and Foundry for testing and deployment. We also cover React, Next.js, and Web3 libraries like Wagmi for building complete dApps."
+        },
     ]
 }
