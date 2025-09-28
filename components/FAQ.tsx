@@ -17,5 +17,9 @@ export default function FAQ({ faqs = [] }) {
             question: "What programming languages and tools will I learn?",
             answer: "Our curriculum focuses on Solidity for smart contracts, JavaScript/TypeScript for full-stack development, and Foundry for testing and deployment. We also cover React, Next.js, and Web3 libraries like Wagmi for building complete dApps."
         },
+        {
+            question: "Are the NFT certificates recognized by employers?",
+            answer: "Our NFT certificates are stored permanently on-chain and contain verifiable skill assessments. We're partnering with leading Web3 companies and traditional enterprises entering the blockchain space to ensure our certificates carry real value in the job market."
+        }
     ]
 }
