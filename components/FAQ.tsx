@@ -20,6 +20,10 @@ export default function FAQ({ faqs = [] }) {
         {
             question: "Are the NFT certificates recognized by employers?",
             answer: "Our NFT certificates are stored permanently on-chain and contain verifiable skill assessments. We're partnering with leading Web3 companies and traditional enterprises entering the blockchain space to ensure our certificates carry real value in the job market."
-        }
+        },
+        {
+            question: "How much will the platform cost?",
+            answer: "We're designing multiple pricing tiers to accommodate different learners. There will be free introductory content, affordable subscription plans for comprehensive courses, and premium mentorship programs. Early subscribers will receive significant discounts."
+        },
     ]
 }
