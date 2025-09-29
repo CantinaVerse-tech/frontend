@@ -25,5 +25,9 @@ export default function FAQ({ faqs = [] }) {
             question: "How much will the platform cost?",
             answer: "We're designing multiple pricing tiers to accommodate different learners. There will be free introductory content, affordable subscription plans for comprehensive courses, and premium mentorship programs. Early subscribers will receive significant discounts."
         },
+        {
+            question: "When will the platform launch?",
+            answer: "We're currently in beta development with a planned launch in Q2 2025. Early subscribers will get access to beta courses and can influence the final curriculum. Sign up for our newsletter to be notified of early access opportunities."
+        },
     ]
 }
