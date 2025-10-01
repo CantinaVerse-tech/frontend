@@ -29,5 +29,9 @@ export default function FAQ({ faqs = [] }) {
             question: "When will the platform launch?",
             answer: "We're currently in beta development with a planned launch in Q2 2025. Early subscribers will get access to beta courses and can influence the final curriculum. Sign up for our newsletter to be notified of early access opportunities."
         },
+        {
+            question: "Will there be hands-on projects?",
+            answer: "Absolutely! Every course includes multiple hands-on projects where you'll build real smart contracts, deploy to testnets, and create complete dApps. Our sandbox environments let you experiment safely without spending real gas fees."
+        },
     ]
 }
