@@ -33,5 +33,9 @@ export default function FAQ({ faqs = [] }) {
             question: "Will there be hands-on projects?",
             answer: "Absolutely! Every course includes multiple hands-on projects where you'll build real smart contracts, deploy to testnets, and create complete dApps. Our sandbox environments let you experiment safely without spending real gas fees."
         },
+        {
+            question: "Do you offer job placement assistance?",
+            answer: "Yes! Our career services include portfolio reviews, mock interviews, and direct connections with hiring partners in the Web3 space. We're building relationships with companies actively seeking blockchain developers."
+        }
     ]
 }
