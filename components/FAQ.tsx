@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 
 export default function FAQ({ faqs = [] }) {
         const [openIndex, setOpenIndex] = useState(0);
@@ -41,4 +41,7 @@ export default function FAQ({ faqs = [] }) {
 
     const questions = faqs.length > 0 ? faqs : defaultFAQs;
 
+    const toggleFAQ = (index: SetStateAction<number>) => {
+        setOpenIndex(openIndex === index ? -1 : index);
+    };
 }
