@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 
 export default function FAQ({ faqs = [] }) {
         const [openIndex, setOpenIndex] = useState(0);
@@ -38,4 +38,10 @@ export default function FAQ({ faqs = [] }) {
             answer: "Yes! Our career services include portfolio reviews, mock interviews, and direct connections with hiring partners in the Web3 space. We're building relationships with companies actively seeking blockchain developers."
         }
     ]
+
+    const questions = faqs.length > 0 ? faqs : defaultFAQs;
+
+    const toggleFAQ = (index: SetStateAction<number>) => {
+        setOpenIndex(openIndex === index ? -1 : index);
+    };
 }
