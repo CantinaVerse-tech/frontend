@@ -56,7 +56,40 @@ export default function FAQ({ faqs = [] }) {
                         Everything you need to know about our platform
                     </p>
                 </div>
-            
-            </div>
+                <div className="space-y-4">
+                    {questions.map((faq, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300 hover:shadow-lg"
+                        >
+                            <button
+                                onClick={() => toggleFAQ(index)}
+                                className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                            >
+                                <h3 className="text-lg font-semibold text-gray-800 pr-4">
+                                    {faq.question}
+                                </h3>
+                                <div className={`transform transition-transform duration-300 ${
+                                    openIndex === index ? 'rotate-180' : ''
+                                }`}>
+                                    <svg className="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                            </button>
+                            
+                            <div className={`transition-all duration-300 ease-in-out ${
+                                openIndex === index 
+                                    ? 'max-h-96 opacity-100' 
+                                    : 'max-h-0 opacity-0'
+                            } overflow-hidden`}>
+                                <div className="px-6 pb-5 text-gray-600 leading-relaxed">
+                                    {faq.answer}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
         </div>
+    </div>
 )}
